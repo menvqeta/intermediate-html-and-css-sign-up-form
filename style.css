@@ -1,0 +1,11 @@
+.splash-image-section {
+    background-image: url(./images/taylor-kopel-unsplash.jpg);
+}
+/*
+img[id="odin-logo-bar"] {
+    opacity: 0.1;
+}
+*/
+#odin-logo-bar-img {
+    opacity: 0.01;
+}
