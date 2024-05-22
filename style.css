@@ -88,4 +88,17 @@ body {
 
 .form-header-section {
     margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    justify-content: space-between;
+
+}
+
+.form-header-section p {
+    margin: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    max-width: calc(100% - 10vh);
 }
