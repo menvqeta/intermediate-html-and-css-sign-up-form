@@ -2,6 +2,7 @@
     --text-color-for-spash-section: aliceblue;
     --url-hover-color: lightblue;
     --global-background-color: darkslategrey;
+    --background-color-for-form-section: #112953a2;
 }
 
 body {
@@ -25,7 +26,6 @@ body {
 
 .splash-image-section {
     background-image: url(./images/taylor-kopel-unsplash.jpg);
-    width: 40%;
     background-size: 30vw auto;
     background-repeat: no-repeat;
     background-position: center center;
@@ -59,6 +59,7 @@ body {
 .splash-image-section {
     display: flex;
     flex-direction: column;
+    min-width: 30vh;
 }
 
 .background-image-credits {   
@@ -68,7 +69,7 @@ body {
     margin-bottom: 2vh;
     color: var(--text-color-for-spash-section);
     justify-content: center;
-    font-size: 1rem;
+    font-size: 0.5rem;
 }
 
 .credit-person-urls {
@@ -82,7 +83,6 @@ body {
 .form-section {
     display: flex;
     flex-direction: column;
-    margin-left: 5vh;
     align-items: flex-start;
 }
 
@@ -92,7 +92,7 @@ body {
     flex-direction: column;
     gap: 2vh;
     justify-content: space-between;
-
+    margin-left: 5vh;
 }
 
 .form-header-section p {
@@ -100,5 +100,37 @@ body {
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
-    max-width: calc(100% - 10vh);
+    max-width: calc(100% - 20vh);
+    color: var(--text-color-for-spash-section);
+}
+
+.form-fill-up-section {
+    color: var(--text-color-for-spash-section);
+    margin-top: 5vh;
+    background-color: var(--background-color-for-form-section);
+    
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    margin-right: 10vh;
+}
+
+label {
+    font-size: 0.75rem;
+}
+
+input {
+    border-radius: 0.25rem;
 }
