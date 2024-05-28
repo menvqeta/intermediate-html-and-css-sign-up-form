@@ -1,8 +1,12 @@
 :root {
-    --text-color-for-spash-section: aliceblue;
+    --global-text-color: #f0f8ff;
+    --url-default-color: rgb(144, 144, 246);
     --url-hover-color: lightblue;
     --global-background-color: darkslategrey;
     --background-color-for-form-section: #112953a2;
+    --background-color-for-submit-button: green;
+    --background-color-for-submit-button-when-hovering: rgb(0, 154, 0);
+    --text-color-for-submit-button-when-hovering: black;
 }
 
 body {
@@ -52,8 +56,14 @@ body {
 }
 
 .odin-logo-text {
-    color: var(--text-color-for-spash-section);
+    color: var(--global-text-color);
     font: 3rem sans-serif;
+    max-width: 100%;
+    max-height: 100%; /* Set the maximum width to the width of the parent element */
+    overflow: hidden; /* Hide any content that exceeds the maximum width */
+    white-space: nowrap; /* Prevent line breaks */
+    text-overflow: ellipsis; /* Show ellipsis if the content overflows */
+  
 }
 
 .splash-image-section {
@@ -67,13 +77,13 @@ body {
     flex-direction: row;
     margin-top: auto;
     margin-bottom: 2vh;
-    color: var(--text-color-for-spash-section);
+    color: var(--global-text-color);
     justify-content: center;
     font-size: 0.5rem;
 }
 
 .credit-person-urls {
-    color: var(--text-color-for-spash-section);
+    color: var(--url-default-color);
 }
 
 .credit-person-urls:hover {
@@ -101,21 +111,26 @@ body {
     word-wrap: break-word;
     hyphens: auto;
     max-width: calc(100% - 20vh);
-    color: var(--text-color-for-spash-section);
+    color: var(--global-text-color);
 }
 
 .form-fill-up-section {
-    color: var(--text-color-for-spash-section);
+    color: var(--global-text-color);
     margin-top: 5vh;
-    background-color: var(--background-color-for-form-section);
-    
+    background-color: var(--background-color-for-form-section);    
 }
+
+.form-fill-up-section p {
+    margin-left: 5vh;
+}
+
 
 ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 0%;
 }
 
 li {
@@ -125,6 +140,7 @@ li {
     flex-basis: calc(33.33% - 10px);
     margin-bottom: 20px;
     margin-right: 10vh;
+    margin-left: 5vh;
 }
 
 label {
@@ -134,3 +150,39 @@ label {
 input {
     border-radius: 0.25rem;
 }
+
+.form-button-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vh;
+    margin-top: 3vh;
+    gap: 3vh;    
+}
+
+button[form="form-details"] {
+    background-color: var(--background-color-for-submit-button);
+    border-radius: 0.5rem;
+    color: var(--global-text-color);
+    font-weight: bold;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 70%;
+  }
+
+  button[form="form-details"]:hover {
+    background-color: var(--background-color-for-submit-button-when-hovering);
+}
+
+  .existing-account-action {
+    color: var(--global-text-color);
+  }
+
+  .existing-account-action a {
+    color: var(--url-default-color);
+  }
+  .existing-account-action a:hover {
+    color: var(--url-hover-color);
+  }
+
