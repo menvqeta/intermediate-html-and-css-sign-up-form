@@ -137,9 +137,9 @@ li {
     display: flex;
     flex-direction: column;
     gap: 1px;
-    flex-basis: calc(33.33% - 10px);
+    flex-basis: calc(40% - 10px);
     margin-bottom: 20px;
-    margin-right: 10vh;
+    /* margin-right: 10vh; */
     margin-left: 5vh;
 }
 
@@ -149,6 +149,7 @@ label {
 
 input {
     border-radius: 0.25rem;
+    width: 50%;
 }
 
 .form-button-section {
@@ -184,5 +185,32 @@ button[form="form-details"] {
   }
   .existing-account-action a:hover {
     color: var(--url-hover-color);
+  }
+
+  input:focus {
+    outline: none;
+    border: 3px solid #009dff;
+    box-shadow: 0px 0px 5px #009dff;
+  }
+
+  input:focus:invalid {
+    outline: none;
+    border: 3px solid red;   
+  }
+
+  input:invalid {
+    outline: none;
+    border: 3px solid red;   
+  }
+
+  .supporting-text {
+    display: none;
+  }
+
+  input:invalid + .supporting-text {
+    display: block;
+    font-size: 0.75rem;
+    width: 50%;
+    flex-wrap: wrap;
   }
 
