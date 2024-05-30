@@ -212,5 +212,6 @@ button[form="form-details"] {
     font-size: 0.75rem;
     width: 50%;
     flex-wrap: wrap;
+    color: orange;
   }
 

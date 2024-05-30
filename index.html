@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
 </head>
 <body>
     <div class="row-wise-sections">
@@ -41,12 +42,12 @@
                         <ul>
                             <li>
                                 <label for="first-name">FIRST NAME</label>
-                                <input pattern="[a-zA-Z]+" type="text" id="first-name" name="first-name" />
+                                <input pattern="[a-zA-Z]+" type="text" id="first-name" name="first-name" minlength="1" maxlength="20"/>
                                 <span class="supporting-text">Please enter a name consisting of only alphabets like John</span>
                             </li>
                             <li>
                                 <label for="last-name">LAST NAME</label>
-                                <input pattern="[a-zA-Z]+" type="text" id="last-name" name="last-name" />
+                                <input pattern="[a-zA-Z]+" type="text" id="last-name" name="last-name" minlength="1" maxlength="20" />
                                 <span class="supporting-text">Please enter a name consisting of only alphabets like Smith</span>
                             </li>
                             <li>
@@ -56,15 +57,18 @@
                             </li>
                             <li>
                                 <label for="phone">PHONE NUMBER</label>
-                                <input type="tel" id="phone" name="phone" />
+                                <input type="tel" id="phone" name="phone" pattern="[789][0-9]{9}" />
+                                <span class="supporting-text">Enter a valid 10 digit phone number starting with 7,8 or 9</span>
                             </li>
                             <li>
                                 <label for="password">PASSWORD</label>
-                                <input type="password" id="password" name="password">
+                                <input type="password" id="password" name="password" minlength="8">
+                                <span class="supporting-text">Password must contain at least 8 characters</span>
                             </li>
                             <li>
                                 <label for="password">CONFIRM PASSWORD</label>
                                 <input type="password" id="confirm-password" name="confirm-password">
+                                <span class="supporting-text"></span>
                             </li>   
                         </ul>
                     </form>
