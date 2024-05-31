@@ -1,3 +1,7 @@
+/* ------------------------------------------------- */
+/* ROOT AND BODY SECTION */
+/* ------------------------------------------------- */
+
 :root {
     --global-text-color: #f0f8ff;
     --url-default-color: rgb(144, 144, 246);
@@ -8,6 +12,9 @@
     --background-color-for-submit-button-when-hovering: rgb(0, 154, 0);
     --text-color-for-submit-button-when-hovering: black;
     --width-of-image-section: 40vw;
+    --left-margin-for-form-section: 5vh;
+    --text-box-focus-color: #009dff;
+    --invalid-text-box-color: red;
 }
 
 body {
@@ -15,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0px;
-    font-family:'Roboto', arial;
+    font-family: 'Roboto', arial;
     gap: 20px;
     padding: 0px;
     margin: 0px;
@@ -28,6 +35,11 @@ body {
     margin: 0px;
     min-height: 100vh;
 }
+
+/* ------------------------------------------------- */
+/* SPLASH IMAGE SECTION */
+/* ------------------------------------------------- */
+
 
 .splash-image-section {
     background-image: url(./images/taylor-kopel-unsplash.jpg);
@@ -60,11 +72,15 @@ body {
     color: var(--global-text-color);
     font: 3rem sans-serif;
     max-width: 100%;
-    max-height: 100%; /* Set the maximum width to the width of the parent element */
-    overflow: hidden; /* Hide any content that exceeds the maximum width */
-    white-space: nowrap; /* Prevent line breaks */
-    text-overflow: ellipsis; /* Show ellipsis if the content overflows */
-  
+    max-height: 100%;
+    /* Set the maximum width to the width of the parent element */
+    overflow: hidden;
+    /* Hide any content that exceeds the maximum width */
+    white-space: nowrap;
+    /* Prevent line breaks */
+    text-overflow: ellipsis;
+    /* Show ellipsis if the content overflows */
+
 }
 
 .splash-image-section {
@@ -73,7 +89,7 @@ body {
     min-width: var(--width-of-image-section);
 }
 
-.background-image-credits {   
+.background-image-credits {
     display: flex;
     flex-direction: row;
     margin-top: auto;
@@ -91,6 +107,12 @@ body {
     color: var(--url-hover-color);
 }
 
+/* ------------------------------------------------- */
+/* FORM SECTION */
+/* ------------------------------------------------- */
+
+
+
 .form-section {
     display: flex;
     flex-direction: column;
@@ -103,7 +125,7 @@ body {
     flex-direction: column;
     gap: 2vh;
     justify-content: space-between;
-    margin-left: 5vh;
+    margin-left: var(--left-margin-for-form-section);
 }
 
 .form-header-section p {
@@ -118,11 +140,11 @@ body {
 .form-fill-up-section {
     color: var(--global-text-color);
     margin-top: 5vh;
-    background-color: var(--background-color-for-form-section);    
+    background-color: var(--background-color-for-form-section);
 }
 
 .form-fill-up-section p {
-    margin-left: 5vh;
+    margin-left: var(--left-margin-for-form-section);
 }
 
 
@@ -140,8 +162,7 @@ li {
     gap: 1px;
     flex-basis: calc(40% - 10px);
     margin-bottom: 20px;
-    /* margin-right: 10vh; */
-    margin-left: 5vh;
+    margin-left: var(--left-margin-for-form-section);
 }
 
 label {
@@ -156,9 +177,9 @@ input {
 .form-button-section {
     display: flex;
     flex-direction: column;
-    margin-left: 5vh;
+    margin-left: var(--left-margin-for-form-section);
     margin-top: 3vh;
-    gap: 3vh;    
+    gap: 3vh;
 }
 
 button[form="form-details"] {
@@ -171,58 +192,61 @@ button[form="form-details"] {
     padding-left: 1%;
     padding-right: 1%;
     width: 70%;
-  }
+}
 
-  button[form="form-details"]:hover {
+button[form="form-details"]:hover {
     background-color: var(--background-color-for-submit-button-when-hovering);
 }
 
-  .existing-account-action {
+.existing-account-action {
     color: var(--global-text-color);
-  }
+}
 
-  .existing-account-action a {
+.existing-account-action a {
     color: var(--url-default-color);
-  }
-  .existing-account-action a:hover {
+}
+
+.existing-account-action a:hover {
     color: var(--url-hover-color);
-  }
+}
 
-  input:focus {
+input:focus {
     outline: none;
-    border: 3px solid #009dff;
-    box-shadow: 0px 0px 5px #009dff;
-  }
+    border: 3px solid var(--text-box-focus-color);
+    box-shadow: 0px 0px 5px var(--text-box-focus-color);
+}
 
-  input:focus:invalid {
+input:focus:invalid {
     outline: none;
-    border: 3px solid red;   
-  }
+    border: 3px solid var(--invalid-text-box-color);
+}
 
-  input:invalid {
+input:invalid {
     outline: none;
-    border: 3px solid red;   
-  }
+    border: 3px solid var(--invalid-text-box-color);
+}
 
-  .supporting-text {
+.supporting-text {
     display: none;
-  }
+}
 
-  input:invalid + .supporting-text {
+input:invalid+.supporting-text {
     display: block;
     font-size: 0.75rem;
     width: 50%;
     flex-wrap: wrap;
     color: orange;
-  }
+}
 
 
-  #github-link {
+#github-link {
     margin: 0;
     padding: 0;
-}   
+}
 
-  #github-image {
-    width: auto; /* Allow the image width to adjust based on its content */
-    height: 25px; /* Set a specific height for the image if needed */
-  }
+#github-image {
+    width: auto;
+    /* Allow the image width to adjust based on its content */
+    height: 25px;
+    /* Set a specific height for the image if needed */
+}

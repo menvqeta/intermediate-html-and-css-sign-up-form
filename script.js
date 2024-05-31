@@ -5,8 +5,8 @@ const supportingText = document.querySelector('#confirm-password ~ .supporting-t
 confirmPasswordInput.addEventListener('input', () => {
     if (passwordInput.value !== confirmPasswordInput.value) {
         supportingText.textContent = 'Passwords do not match';
-        confirmPasswordInput.classList.add('invalid');   
-    } 
+        confirmPasswordInput.classList.add('invalid');
+    }
     else {
         supportingText.textContent = '';
         confirmPasswordInput.classList.remove('invalid');
