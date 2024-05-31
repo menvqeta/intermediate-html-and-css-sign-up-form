@@ -7,6 +7,7 @@
     --background-color-for-submit-button: green;
     --background-color-for-submit-button-when-hovering: rgb(0, 154, 0);
     --text-color-for-submit-button-when-hovering: black;
+    --width-of-image-section: 40vw;
 }
 
 body {
@@ -30,10 +31,10 @@ body {
 
 .splash-image-section {
     background-image: url(./images/taylor-kopel-unsplash.jpg);
-    background-size: 30vw auto;
+    background-size: var(--width-of-image-section) auto;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 30vw;
+    width: var(--width-of-image-section);
     height: 100vh;
     border-radius: 20px;
 }
@@ -69,7 +70,7 @@ body {
 .splash-image-section {
     display: flex;
     flex-direction: column;
-    min-width: 30vh;
+    min-width: var(--width-of-image-section);
 }
 
 .background-image-credits {   
@@ -215,3 +216,13 @@ button[form="form-details"] {
     color: orange;
   }
 
+
+  #github-link {
+    margin: 0;
+    padding: 0;
+}   
+
+  #github-image {
+    width: auto; /* Allow the image width to adjust based on its content */
+    height: 25px; /* Set a specific height for the image if needed */
+  }

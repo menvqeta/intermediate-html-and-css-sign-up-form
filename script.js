@@ -1,13 +1,14 @@
+//THIS SCRIPT ESPECIALLY invalid class does not work
 const passwordInput = document.querySelector("#password");
 const confirmPasswordInput = document.querySelector('#confirm-password');
-const supportingText = document.querySelector('#confirm-password + supporting-text');
-
+const supportingText = document.querySelector('#confirm-password ~ .supporting-text');
 confirmPasswordInput.addEventListener('input', () => {
-    console.log('lol');
     if (passwordInput.value !== confirmPasswordInput.value) {
-    console.log('Passwords do not match');
-    supportingText.textContent = 'Passwords do not match';
-  } else {
-    supportingText.textContent = '';
-  }
+        supportingText.textContent = 'Passwords do not match';
+        confirmPasswordInput.classList.add('invalid');   
+    } 
+    else {
+        supportingText.textContent = '';
+        confirmPasswordInput.classList.remove('invalid');
+    }
 });

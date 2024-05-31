@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
 </head>
 <body>
     <div class="row-wise-sections">
@@ -38,7 +37,7 @@
             <div class="form-fill-up-section">
                 <p>Let's do this!</p>        
                 <div class="actual-forms">
-                    <form id="form-details" action="www.google.com" method="post">
+                    <form id="form-details" action="https://github.com/menvqeta/intermediate-html-and-css-sign-up-form" method="post">
                         <ul>
                             <li>
                                 <label for="first-name">FIRST NAME</label>
@@ -67,8 +66,8 @@
                             </li>
                             <li>
                                 <label for="password">CONFIRM PASSWORD</label>
-                                <input type="password" id="confirm-password" name="confirm-password">
-                                <span class="supporting-text"></span>
+                                <input type="password" id="confirm-password" name="confirm-password" minlength="8">
+                                <span class="supporting-text">Password must contain at least 8 characters</span>
                             </li>   
                         </ul>
                     </form>
@@ -77,13 +76,13 @@
             <div class="form-button-section">
                 <button type="submit" form="form-details" value="Submit">Create Account</button>
                 <div class="existing-account-action">
-                    Already have an account? <a href="https://www.google.com/">Log in</a>
+                    Already have an account? <a href="https://github.com/menvqeta/intermediate-html-and-css-sign-up-form">Log in</a>
+                </div>
+                <div class="footer-link">
+                    <a href="https://github.com/menvqeta/intermediate-html-and-css-sign-up-form" id="github-link"><img src="./images/github-mark-white.png" id="github-image"></a>
                 </div>
             </div>
         </div>
-
-    </div>
-    
-    
+    </div>    
 </body>
 </html>
